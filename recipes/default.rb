@@ -52,20 +52,20 @@ application 'descartes' do
   environment descartes_env
 
   ruby do
-    version ruby_version
+    version '1.9.3-p194'
   end
 
   sinatra do
     gems ['rake', 'unicorn']
     bundler true
-    bundle_command "/opt/rubies/#{ruby_version}/bin/bundle"
+    bundle_command "/opt/rubies/1.9.3-p194/bin/bundle"
   end
 
   thin do
     port "8080"
     env descartes_env
     bundler true
-    bundle_command "/opt/rubies/#{ruby_version}/bin/bundle"
+    bundle_command "/opt/rubies/1.9.3-p194/bin/bundle"
   end
 
 end
