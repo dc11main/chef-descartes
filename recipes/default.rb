@@ -51,15 +51,6 @@ application 'descartes' do
   environment_name 'production'
   environment descartes_env
 
-  user do
-    user 'descartes'
-    uid 954
-    group 'descartes'
-    gid 954
-    path "/opt/rubies/#{ruby_version}/bin:#{ENV['PATH']}"
-    ssh_keys_path '/usr/local/etc/ssh/keys/descartes'
-  end
-
   ruby do
     version ruby_version
   end
